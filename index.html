@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body{font-family: 'Inter', sans-serif;}
+    .lists{
+      color: gray;
+      /* font-weigwht: 600; */
+    }
+    .lists:hover{
+      color: hsl(5, 85%, 63%);
+      cursor: pointer;
+    }
+    .navul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    @media only screen and (max-width: 1024px){
+      .lists{
+      color: white;
+      /* font-weigwht: 600; */
+    }
+      .navul{
+      display: flex;
+      width: 100vw;
+      background: hsl(5, 85%, 63%);
+      color: white;
+      font-size: large;
+      padding: 50px 0px;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 2rem;
+      flex-direction: column;
+      position: absolute;
+      top: 0rem;
+      left: -9990rem;
+      transition: left 0.6s ease-in-out;
+    }
+}
+.dnone{
+  display: none;
+}
+  </style>
+</head>
+<body>
+<header class="w-[100vw] flex flex-col items-center lg:h-[115vh] h-[230vh] lg:gap-3">
+
+  <nav class="w-[95vw] sm:w-[90vw] xl:w-[75vw] flex justify-between items-center h-[13vh]">
+    <img src="./assets/images/logo.svg" alt="">
+    <ul class=" navul">
+      <li class="lists">Home</li>       
+      <li class="lists">New</li>
+      <li class="lists">Popular</li>
+      <li class="lists">Trending</li>
+      <li class="lists">Categories</li>
+      <img id="menuremove" src="./assets/images/icon-menu-close.svg" class="absolute top-6 right-9" alt="">
+    </ul>
+    <img id="menuadd" src="./assets/images/icon-menu.svg" class="lg:hidden" alt="">
+  </nav>
+  <div class="mainPart w-[95vw] sm:w-[90vw] xl:w-[75vw] h-[150vh] lg:h-[80vh] flex flex-col lg:flex-row lg:justify-between ">
+    <div class="brightFuture w-full lg:w-[65%] lg:h-full h-[37%] sm:h-[45%] md:h-[55%] flex flex-col gap-4">
+      <img src="./assets/images/image-web-3-desktop.jpg" class="lg:h-[60%]"  alt="">
+      <div class="textbox w-full sm:h-[45%] h-[65%] sm:h-[45%] lg:h-[40%]  flex justify-evenly lg:justify-between lg:flex-row flex-col justify-evenly lg:gap-0 gap-5">
+        <div class="heding w-full lg:w-[40%] lg:h-full h-[10%] h-[17%] ">
+          <h1 class="lg:text-5xl text-2xl sm:text-3xl sm:leading-tight sm:tracking-tight  px-2 font-black"> The Bright Future of Web 3.0?</h1>
+        </div>
+        <div class="contentPart w-full lg:w-[45%] lg:h-full h-[50%] flex flex-col justify-evenly">
+          <p class="text-gray-700 text-xs md:text-base sm:text-sm lg:leading-6 ">  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?</p>
+            <button class="outline-none border-none bg-[#f0594c] w-44 py-3 text-white my-3 lg:my-0">Read more</button>
+        </div>
+      </div>
+    </div>
+    <div class="new w-full sm:w-[90%] lg:w-[33%] lg:h-full h-[45%] flex flex-col gap-5 justify-center items-center bg-black">
+      <h1 class="font-bold text-2xl text-yellow-400 px-5 py-2 w-full">New</h1>
+      <div class="box w-[90%] h-[23%] ">
+        <h2 class="text-xl text-white">  Hydrogen VS Electric Cars</h2>
+        <p class="text-gray-400 sm:text-base text-sm">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </div>
+      <div class="box w-[90%] h-[23%] ">
+        <h2 class="text-xl text-white">The Downsides of AI Artistry</h2>
+        <p class="text-gray-400 sm:text-base text-sm">What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+      <div class="box w-[90%] h-[23%] ">
+        <h2 class="text-xl text-white">Is VC Funding Drying Up?</h2>
+        <p class="text-gray-400 sm:text-base text-sm">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="main w-[95vw] sm:w-[90vw] xl:w-[77vw] lg:my-5 my-[-4.5rem] md:my-2 lg:gap-0 gap-1 h-[75vh] lg:h-[23vh] bg-slate-100 mb-3 flex justify-center items-center lg:flex-row flex-col">
+<div class="item lg:w-1/3 lg:h-full flex gap-3 bg-white h-1/3 w-full">
+  <img src="./assets/images/image-retro-pcs.jpg" class="h-full" alt="">
+  <div class="textbox flex flex-col justify-center">
+    <h1 class="text-2xl text-gray-300 font-bold">01</h1>
+    <h1 class="sm:text-3xl text-lg lg:text-lg font-extrabold ">Reviving Retro PCs</h1>
+    <p class="text-gray-500 lg:leading-6 text-sm text-base lg:text-sm pr-2">  What happens when old PCs are given modern upgrades?
+    </p>
+  </div>
+</div>
+<div class="item lg:w-1/3 lg:h-full flex gap-3 bg-white h-1/3 w-full">
+  <img src="./assets/images/image-top-laptops.jpg" class="h-full" alt="">
+  <div class="textbox flex flex-col justify-center">
+    <h1 class="text-2xl text-gray-300 font-bold">02</h1>
+    <h1 class="text-lg font-extrabold ">Top 10 Laptops of 2022</h1>
+    <p class="text-gray-500 lg:leading-6 text-sm pr-2"> Our best picks for various needs and budgets.
+    </p>
+  </div>
+</div>
+<div class="item lg:w-1/3 lg:h-full flex gap-3 bg-white h-1/3 w-full">
+  <img src="./assets/images/image-gaming-growth.jpg" class="h-full" alt="">
+  <div class="textbox flex flex-col justify-center">
+    <h1 class="text-2xl text-gray-300 font-bold">03</h1>
+    <h1 class="text-lg font-extrabold " >The Growth of Gaming </h1>
+    <p class="text-gray-500 lg:leading-6 text-sm pr-2"> How the pandemic has sparked fresh opportunities.
+    </p>
+  </div>
+</div>
+  </div>
+</header>
+<script>
+  menuadd.addEventListener('click',(e)=>{
+var navul= document.querySelector('.navul')
+navul.classList.add('left-0')
+  })
+  menuremove.addEventListener('click',(e)=>{
+var navul= document.querySelector('.navul')
+navul.classList.remove('left-0')
+  })
+</script>
+</body>
+</html>
